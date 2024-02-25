@@ -1,0 +1,18 @@
+.headerBar {
+    height: 10vh;
+    width: 99vw;
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: aliceblue;
+
+}
+
+.inputOptions {
+    font-size: 1.25em;
+}
+
+.headerTopic {
+    font-size: 2.5em;
+}
