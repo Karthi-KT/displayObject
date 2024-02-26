@@ -1,12 +1,11 @@
 import DisplayTable from "./Compnents/DisplayTable";
 import Header from "./Compnents/Header";
-import StudentData from "./StudentData"
+import StudentData from "./Compnents/StudentData.js";
 
 function App() {
   return (
-    
     <>
-      <Header />
+      <Header StudentData={StudentData} />
       <DisplayTable StudentData={StudentData} />
     </>
   );

@@ -122,5 +122,4 @@ const StudentData = [
     Result: "Fail",
   },
 ];
-export default StudentData;
-
+export default StudentData ;

@@ -1,11 +1,7 @@
 // import React from "react";
 import PropTypes from "prop-types";
-// import StudentData from "../studentData.js";
 
-const DisplayTable = ({ StudentData }) => {
-  // console.log(typeof { StudentData });
-  // console.log(Array.isArray(StudentData));
-
+const DisplayData = (setDisplayData) => {
   return (
     <div>
       <table className="mainTable">
@@ -19,7 +15,7 @@ const DisplayTable = ({ StudentData }) => {
           </tr>
         </thead>
         <tbody>
-          {StudentData.map((student) => (
+          {setDisplayData.map((student) => (
             <tr key={student.id}>
               <td>{student.id}</td>
               <td>{student.name}</td>
@@ -34,8 +30,8 @@ const DisplayTable = ({ StudentData }) => {
   );
 };
 
-DisplayTable.propTypes = {
-  StudentData: PropTypes.arrayOf(
+DisplayData.propTypes = {
+  setDisplayData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -46,4 +42,4 @@ DisplayTable.propTypes = {
   ),
 };
 
-export default DisplayTable;
+export default DisplayData;
