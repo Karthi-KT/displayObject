@@ -15,20 +15,17 @@ const Header = ({ StudentData }) => {
       student.name.toLowerCase().includes(searchKey.toLowerCase())
     );
     setSearchResult(searchDisplay);
-    // <DisplayData setDisplayData={setDisplayData} />;
   };
 
   const sortByMark = () => {
     const sortedByMarks = [...StudentData];
     sortedByMarks.sort((a, b) => b.marks - a.marks);
     setDisplayData(sortedByMarks);
-    // <DisplayData setDisplayData={setDisplayData} />;
   };
   const sortByAttendance = () => {
     const sortedByAttendance = [...StudentData];
     sortedByAttendance.sort((a, b) => b.attendance - a.attendance);
     setDisplayData(sortByAttendance);
-    // <DisplayData setDisplayData={setDisplayData} />;
   };
 
   return (
@@ -62,6 +59,7 @@ const Header = ({ StudentData }) => {
           <option value="">Attendance</option>
         </select>
       </div>
+      <DisplayData setDisplayData={setDisplayData} />;
     </div>
   );
 };
